@@ -18,7 +18,7 @@ function setBusy(value) {
   $('entity').disabled = value;
   $('refresh').disabled = value;
   $('cancel').disabled = value;
-  for (const button of $('records').querySelectorAll('button')) button.disabled = value;
+  for (const button of $('records').querySelectorAll('button')) button.disabled = value || !ready;
 }
 function reset() {
   editing = null;
